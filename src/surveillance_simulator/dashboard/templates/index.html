@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Autonomous Surveillance Simulator</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <h1>Autonomous Surveillance Simulator</h1>
+    </header>
+    
+    <div class="controls">
+        <div class="control-group">
+            <button id="initializeBtn" class="btn">Initialize Simulation</button>
+            <label>Sensors: <input type="number" id="numSensors" value="5" min="1" max="50"></label>
+            <label>Objects: <input type="number" id="numObjects" value="20" min="1" max="100"></label>
+            <label>Speed: <input type="range" id="simulationSpeed" min="0.1" max="5" step="0.1" value="1"></label>
+            <span id="speedValue">1.0x</span>
+        </div>
+    </div>
+    
+    <div class="dashboard">
+        <div class="canvas-container">
+            <canvas id="simulationCanvas" width="1000" height="1000"></canvas>
+        </div>
+        <div class="stats-container">
+            <div class="stats">
+                <h2>Sensors</h2>
+                <div id="sensorStats" class="stat-cards"></div>
+            </div>
+            <div class="stats">
+                <h2>Detections</h2>
+                <div id="detectionStats"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="legend">
+        <div class="legend-item"><span class="legend-color drone"></span> Drone Sensor</div>
+        <div class="legend-item"><span class="legend-color tower"></span> Tower Sensor</div>
+        <div class="legend-item"><span class="legend-color border-unit"></span> Border Unit</div>
+        <div class="legend-item"><span class="legend-color person"></span> Person</div>
+        <div class="legend-item"><span class="legend-color vehicle"></span> Vehicle</div>
+        <div class="legend-item"><span class="legend-color drone-object"></span> Drone Object</div>
+    </div>
+    
+    <script src="/static/js/dashboard.js"></script>
+    <script src="/static/js/canvas-interaction.js"></script>
+    <script src="/static/js/keyboard-navigation.js"></script>
+    <script src="/static/js/button-navigation.js"></script>
+</body>
+</html>
