@@ -51,11 +51,6 @@ pip install -r requirements.txt
     └── test_main.py
 ```
 
-## Development
-
-- Run tests: `pytest`
-- Format code: `black .`
-- Lint code: `flake8`
 
 ## Dependencies
 - FastAPI - Modern, high-performance web framework for building APIs
@@ -69,7 +64,6 @@ pip install -r requirements.txt
 - Multiple sensor types with different capabilities (drones, towers, border units)
 - Object detection with varying confidence levels
 - WebSocket-based real-time updates
-- Interactive visualization with pan and zoom capabilities
 - Configurable simulation parameters
 
 ## Technologies Used
@@ -87,6 +81,26 @@ pip install -r requirements.txt
 4. Navigate the map using the navigation controls
 5. Monitor sensor status and detections in the right panel
 
+- **Working Features:**
+  - Sensor initialization and visualization
+  - Object detection and tracking
+  - Real-time simulation updates
+  - Basic visualization of the simulation area
+
+- **Known Issues:**
+  - Interactive navigation (pan/zoom) may not function properly in all browsers
+  - Object detection ranges might need fine-tuning
+  - Performance may degrade with large numbers of objects/sensors
+  - Some UI elements might not be fully responsive
+
+## Purpose
+This project was created as a personal learning exercise to explore:
+- Asynchronous programming in Python with FastAPI
+- Real-time data streaming with WebSockets
+- Interactive visualizations with HTML Canvas
+- Simulation algorithms for autonomous systems
+
 ## Screenshots
-[Include screenshots of your application here]
+<img width="1649" alt="image" src="https://github.com/user-attachments/assets/94b7b562-21c3-456d-99fc-c7f262274a80" />
+
 
